@@ -1,0 +1,27 @@
+name: 'Encryption'
+description: 'text encryption'
+author: 'Jiulong Hu'
+inputs:
+  algorithm:
+    description: 'encryption algorithm'
+    default: 'aes-128-cbc'
+    required: false
+  text:
+    description: 'text to be encrypted'
+    required: true
+  key:
+    description: 'secret key'
+    required: true
+  iv:
+    description: 'initialization vector'
+    required: false
+  encoding:
+    description: 'output encoding'
+    default: 'hex'
+    required: false
+outputs:
+  ciphertext:
+    description: 'ciphertext'
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
